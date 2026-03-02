@@ -7,8 +7,6 @@ function ThemeToggleButton() {
 
     const { theme, toggleTheme} = useContext(ThemeContext)
 
-
-
 return(
     <div>
         <button onClick={toggleTheme}>
