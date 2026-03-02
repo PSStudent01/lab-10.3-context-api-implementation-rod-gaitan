@@ -70,15 +70,15 @@ export function TodoProvider({ children }) { // a) contains/wraps the entire app
                                                       // and for each 'todo' in the array (todos), KEEP this todo if it IS NOT completed  IOWS REMOVE this todo if it IS completed"
   };            
 
-  // value object that will be shared with ALL components that use this context
-  const value = {
-    todos,
-    addTodo,
-    toggleTodo,
-    deleteTodo,
-    editTodo,
-    clearCompleted
-  };
+    // value object that will be shared with ALL components that use this context
+    const value = {
+        todos,
+        addTodo,
+        toggleTodo,
+        deleteTodo,
+        editTodo,
+        clearCompleted
+    };
 
   return ( //returns JSX. What the TodoProvider component renders
     <TodoContext.Provider value={value}>  {/* opening tag of the Context Provider component.  The 'TodoContext.Provider' is the component that wraps your app and shares the data' */}
