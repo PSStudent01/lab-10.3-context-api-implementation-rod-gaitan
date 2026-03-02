@@ -1,7 +1,7 @@
 
 // TodoContext.jsx:
 
-import { createContext } from 'react'; //importing the 'createContext' functoin from the React library
+import { createContext, useState, useEffect  } from 'react'; //importing the 'createContext' functoin from the React library
 
 // 1) Create the 'Context':
 const TodoContext = createContext(); // creates an 'empty context object' to store the 'todo state'
@@ -89,6 +89,7 @@ export function TodoProvider({ children }) { // a) contains/wraps the entire app
   );
 }
 
+export { TodoContext };
 
 /* Custom hook to use the TodoContext
 export function useTodos() {

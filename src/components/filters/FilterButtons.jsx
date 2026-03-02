@@ -9,11 +9,11 @@ function FilterButtons() {
    
 return(
     <div>
-        <button onClick={() => setFilter('all')}> All </button>
+        <button onClick={() => setFilter('all')}  style={{  gap: '12px', marginBottom: '20px' }}> All </button>
 
-        <button onClick={() => setFilter('active')}> Active</button>
+        <button onClick={() => setFilter('active')} style={{  gap: '12px', marginBottom: '20px' }}> Active</button>
 
-        <button onClick={() => setFilter('completed')}> Completed </button>
+        <button onClick={() => setFilter('completed')} style={{  gap: '12px', marginBottom: '20px' }}> Completed </button>
 
     </div>
 )

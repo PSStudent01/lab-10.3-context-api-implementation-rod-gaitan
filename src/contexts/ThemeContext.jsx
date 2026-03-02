@@ -1,6 +1,6 @@
 
 // ThemeContext.jsx
-import {createContext, useState } from 'react'
+import {createContext, useState, useEffect } from 'react'
 
 // 1) Create the 'Context':
 const ThemeContext = createContext(); // creates an 'empty context object' to store the 'todo state'
@@ -35,11 +35,36 @@ export function ThemeProvider({ children }) { // a) contains/wraps the entire ap
                                                     // ELSE IF 'light' is false return 'light' IOWs, remain teh same!!
   };
 
+  // Value object to share via context
+  const value = {
+    theme,
+    toggleTheme
+  };
+
  return ( //returns JSX. What the ThemeProvider component renders
     <ThemeContext.Provider value={value}>  {/* opening tag of the Context Provider component.  The 'ThemeContext.Provider' is the component that wraps your app and shares the data' */}
       {children}   {/* prop that represents ALL the components wrapped inside the Provider.  Provider doesn't need to know what's inside it as you decide what to wrap when you use it*/}
     </ThemeContext.Provider>
   );
 
-
 }
+
+export { ThemeContext };
+
+/*
+// Value object to share via context
+  const value = {
+    theme,
+    toggleTheme
+  };
+
+  return (
+    <ThemeContext.Provider value={value}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+// 3. Export the context so components can use it with useContext
+export { ThemeContext };
+*/

@@ -9,7 +9,7 @@ function ThemeToggleButton() {
 
 return(
     <div>
-        <button onClick={toggleTheme}>
+        <button onClick={toggleTheme} style={{ flex: 1, marginBottom: '15px'}}>
             {theme === 'light' ? 'Dark Mode': 'Light Mode'}
         </button>
     </div>
