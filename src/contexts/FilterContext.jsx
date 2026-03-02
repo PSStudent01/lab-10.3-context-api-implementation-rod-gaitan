@@ -8,9 +8,9 @@ export function FilterProvider({ children }) { // a) contains/wraps the entire a
                                              // b) and makes the state available to all child components (any components nested inside this 'FilterProvider' component)
                                              // c) states of current filter ('all', 'active', or 'completed')
 
-}
 
-const [filter, setFilter] = useState(() => { 
+
+const [filter, setFilter] = useState("all")  
 
   // value object that will be shared with ALL components that use this context
   const value = {
@@ -26,3 +26,6 @@ return ( //returns JSX. What the TodoProvider component renders
   );
 
 }
+
+// Export the context for components to use with 'useContext'
+export { FilterContext };

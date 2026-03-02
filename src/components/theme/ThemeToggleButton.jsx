@@ -16,9 +16,9 @@ export function TodoProvider({ children }) { // a) contains/wraps the entire app
                                                     // b)searches for the key 'todos'
                                                     // c) if found, it retrives its value and 
                                                     // d) stores it inside 'savedTodos' for further manipulation 
-    return savedTodos ? JSON.parse(savedTodos) : []; // ternary condition where...
+    return savedTodos ? JSON.parse(savedTodos) : []; // ternary condition returns based on where...
                                                     // if 'savedTodos' is truthy (has retrived data), 
-                                                    // then convert data from string to array
+                                                    // then convert data from string to array (destringify)
                                                     // else (if falsy) return 'empty' 
   });
 
