@@ -1,3 +1,4 @@
+// FilterContext.jsx
 import {createContext, useState } from 'react'
 
 // 1) Create the 'Context':

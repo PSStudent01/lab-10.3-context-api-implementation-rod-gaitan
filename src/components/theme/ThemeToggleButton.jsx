@@ -11,8 +11,8 @@ function ThemeToggleButton() {
 
 return(
     <div>
-        <button onclick={toggleTheme}>
-            {theme === 'Light' ? 'Dark Mode': 'Light Mode'}
+        <button onClick={toggleTheme}>
+            {theme === 'light' ? 'Dark Mode': 'Light Mode'}
         </button>
     </div>
 )
@@ -20,3 +20,9 @@ return(
 }
 
 export default ThemeToggleButton
+
+
+
+
+
+
